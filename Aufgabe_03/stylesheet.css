@@ -36,8 +36,11 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color:#60807059;
+    position: fixed;
+    top: 0;
     width: 285px;
-      
+    float: right;  
+    margin-left: 800px;  
 }
 
 li {
@@ -63,7 +66,7 @@ li a:hover:not(.active) {
 
 .socialMedia-box {
     width: fit-content;
-    margin-top: -130px;
+    margin-top: -95px;
     position: relative;
     left: 390px;
 }
