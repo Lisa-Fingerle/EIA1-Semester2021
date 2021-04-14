@@ -1,0 +1,61 @@
+body {
+    background-image: url(../Aufgabe_4.1/Bildmaterial/bg.png);
+    width: 800px;
+    margin: 0 auto;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shell {
+    position: absolute;
+    left: -40px;
+    top: 300px;
+}
+
+.penguin {
+    position: absolute;
+    left: 500px;
+    top: 210px;
+}
+
+#ueberschrift {
+    color: white;
+    position:absolute;
+    left: 90px;
+    top: 20px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text {
+    position: absolute;
+    left: 90px;
+    top: 130px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: white;
+}
+
+#textfeld {
+    position: absolute;
+    left: 90px;
+    top: 166px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+#unterschrift {
+    position: absolute;
+    left: 90px;
+    top: 220px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: white;
+
+}
