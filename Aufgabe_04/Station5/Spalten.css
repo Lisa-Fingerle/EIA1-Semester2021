@@ -1,0 +1,33 @@
+body {
+    background-image: url(../Station5/Bildmaterial/bg.png);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    position: absolute;
+    color: white;
+    top: 50px;
+    left: 20%;
+}
+
+.content-box {
+    columns: 3 auto;
+    position: absolute;
+    top: 130px;
+    width: 500px;
+    left: 50px;
+}
+
+.content-box-2 {
+    columns: 2 auto;
+    position: absolute;
+    top: 250px;
+    width: 500px;
+    left: 50px;
+}

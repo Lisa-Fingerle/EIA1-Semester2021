@@ -1,0 +1,29 @@
+body {
+    background-image: url(Bildmaterial/bg.png);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@font-face {
+    font-family: 'JellykaDeliciousCake';
+    src: url(fonts/jellyka_delicious_cake-webfont.eot);
+    src: url(fonts/jellyka_delicious_cake-webfont.svg);
+    src: url(fonts/jellyka_delicious_cake-webfont.woff2);
+    src: url(fonts/jellyka_delicious_cake-webfont.woff);
+}
+
+.fonts {
+    font-family: 'JellykaDeliciousCake';
+    position: relative;
+    top: -80px;
+    left: -20px;
+}
+
+p {
+    font-size: 25px;
+}
