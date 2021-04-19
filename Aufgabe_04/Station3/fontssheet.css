@@ -26,4 +26,9 @@ body {
 
 p {
     font-size: 25px;
+    padding-left: 10%;
+}
+
+h1 {
+    padding-left: 10%;
 }
