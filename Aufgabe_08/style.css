@@ -1,0 +1,190 @@
+.wrapper {
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+
+.is-hidden {
+    display: none !important;
+}
+
+body {
+    background: rgb(0, 0, 0);
+}
+
+
+.button1 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(73, 73, 158, 0.801);
+    border-radius: 8%;
+    cursor: pointer;
+}
+
+.button1:hover{
+    opacity: 70%;
+}
+
+.button2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(73, 73, 158, 0.801);;
+    margin-left: 160px;
+    border-radius: 8%;
+    cursor: pointer;
+}
+
+.button2:hover{
+    opacity: 70%;
+}
+.button3 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(73, 73, 158, 0.801);;
+    margin-left: 320px;
+    border-radius: 8%;
+    cursor: pointer;
+}
+
+.button3:hover{
+    opacity: 70%;
+}
+
+.button4 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color:#f346bfe0;
+    margin-top: 160px;
+    border-radius: 8%;
+    cursor: pointer;
+}
+
+.button4:hover{
+    opacity: 70%;
+}
+
+.button5 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #f346bfe0;
+    margin-left: 160px;
+    margin-top: 160px;
+    border-radius: 8%;
+    cursor: pointer;
+}
+
+.button5:hover{
+    opacity: 70%;
+}
+
+.button6 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #f346bfe0;
+    margin-left: 320px;
+    margin-top: 160px;
+    border-radius: 8%;
+    cursor: pointer;
+}
+
+.button6:hover{
+    opacity: 70%;
+}
+
+.button7 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #b84a9791;
+    margin-top: 320px;
+    border-radius: 8%;
+    cursor: pointer;
+}
+
+.button7:hover{
+    opacity: 70%;
+}
+
+.button8 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #e4a541;
+    margin-top: 320px;
+    margin-left: 160px;
+    border-radius: 8%;
+    cursor: pointer;
+}
+
+.button8:hover{
+    opacity: 70%;
+}
+
+.button9 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #e4a541;
+    margin-top: 320px;
+    margin-left: 320px;
+    border-radius: 8%;
+    cursor: pointer;
+}
+
+.button9:hover{
+    opacity: 70%;
+}
+
+#play {
+    margin-top: 475px;
+    margin-left: 90px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+#pause {
+    margin-top: 475px;
+    margin-left: 90px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+#play:hover {
+    opacity: 70%;
+    color: rgb(161, 192, 248);
+}
+
+#pause:hover {
+    opacity: 70%;
+    color: rgb(161, 192, 248);
+}
+
+#delete {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+#delete:hover{
+    opacity: 70%;
+    color: rgb(147, 237, 240);
+}
+
+#remix {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+#remix:hover{
+    opacity: 70%;
+    color: rgb(209, 175, 241);
+}
+
