@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+window.addEventListener("load", function () {
     document.querySelector("#sound1").addEventListener("click", function () { abspielen("Material/A.mp3"); });
     document.querySelector("#sound2").addEventListener("click", function () { abspielen("Material/C.mp3"); });
     document.querySelector("#sound3").addEventListener("click", function () { abspielen("Material/F.mp3"); });
@@ -26,6 +26,5 @@ window.addEventListener('load', function () {
             }
         }, 400);
     }
-    ;
 });
 //# sourceMappingURL=Drumpad1.js.map
