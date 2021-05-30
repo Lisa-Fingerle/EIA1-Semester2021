@@ -1,0 +1,50 @@
+body {
+    text-align: center;
+    background: rgba(238, 224, 194, 0.842);
+    background-image: url(background.png);
+    margin: 0 auto;
+}
+
+#inputText {
+    
+    width: 600px;
+    height: 30px;
+    border-radius: 5px;
+    border-color: black;
+    border-style: dotted;
+    
+}
+
+.taskText {
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    width: 595px;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 5px;
+    
+}
+
+
+
+.far {
+    
+    font-size: 30px;
+    
+    
+    
+}
+
+
+
+
+
+.checkBox {
+    
+    font-size: 300px;
+    
+    
+}
+
+
