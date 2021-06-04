@@ -25,6 +25,38 @@ var toDoArray = [
         checked: false
     }
 ];
+window.addEventListener("click", function () {
+    var artyom = new Artyom();
+    function startContinuousArtyom() {
+        artyom.fatality();
+        setTimeout(function () {
+            artyom.initialize({
+                lang: "de-DE",
+                continuous: true,
+                listen: true,
+                interimResults: true,
+                debug: true
+            }).then(function () {
+                console.log("Ready!");
+            });
+        }, 250);
+    }
+    artyom.addCommands({
+        indexes: ["erstelle Aufgabe *"],
+        smart: true,
+        action: function (i, wildcard) {
+            toDoArray.unshift({
+                input: wildcard,
+                checked: false
+            });
+            drawListtodom();
+            artyom.say("Aufgabe wurde ergänzt");
+        }
+    });
+    document.querySelector("#voice").addEventListener("click", function () {
+        startContinuousArtyom();
+    });
+});
 /**
  * Die Anwendung wird immer wieder auf die selben
  * DOM-Elemente zugreifen müssen. Damit diese Elemente nicht
@@ -199,7 +231,4 @@ function deletetodo(index) {
      */
     drawListtodom();
 }
-window.addEventListener("load", function () { }, void {
-    var: artyom = new Artyom()
-});
 //# sourceMappingURL=aufgabe11.js.map

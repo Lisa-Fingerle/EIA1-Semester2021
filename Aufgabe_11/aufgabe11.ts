@@ -37,6 +37,53 @@ var toDoArray: ToDo[] = [
 
 ];
 
+declare var Artyom: any;
+
+window.addEventListener("click", function (): void {
+    var artyom: any = new Artyom();
+
+    function startContinuousArtyom(): void {
+        artyom.fatality();
+
+        setTimeout(
+            function (): void {
+                artyom.initialize({
+                    lang: "de-DE",
+                    continuous: true,
+                    listen: true,
+                    interimResults: true,
+                    debug: true
+                }).then(function (): void {
+                    console.log("Ready!");
+                });
+            },
+            250);
+    }
+
+
+    
+
+    artyom.addCommands({
+        indexes: ["erstelle Aufgabe *"],
+        smart: true,
+        action: function (i: any, wildcard: string): void {
+            toDoArray.unshift({
+                    input: wildcard,
+                    checked: false
+            });
+
+            drawListtodom();
+            artyom.say("Aufgabe wurde ergänzt");
+        }
+    });
+
+    document.querySelector("#voice").addEventListener("click", function (): void {
+        
+        startContinuousArtyom();
+    });
+});
+
+
 /**
  * Die Anwendung wird immer wieder auf die selben
  * DOM-Elemente zugreifen müssen. Damit diese Elemente nicht 
@@ -247,6 +294,9 @@ function deletetodo(index: number): void {
 
 
 
-window.addEventListener("load", function() void {
-    var artyom = new Artyom();
-})
+
+
+
+
+
+
