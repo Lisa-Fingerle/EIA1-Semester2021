@@ -25,7 +25,7 @@ var toDoArray = [
         checked: false
     }
 ];
-window.addEventListener("click", function () {
+window.addEventListener("load", function () {
     var artyom = new Artyom();
     function startContinuousArtyom() {
         artyom.fatality();
@@ -85,7 +85,7 @@ window.addEventListener("load", function () {
     todosDOMElement = document.querySelector("#todos");
     counterDOMElement = document.querySelector("#counter");
     doneDOMElement = document.querySelector("#done");
-    openDOMElement = document.querySelector("open");
+    openDOMElement = document.querySelector("#open");
     /**
      * Jetzt da der DOM verfügbar ist kann auch ein Event-Listener
      * auf den addtodo Button gesetzt werden.

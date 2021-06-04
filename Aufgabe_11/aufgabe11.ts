@@ -39,7 +39,7 @@ var toDoArray: ToDo[] = [
 
 declare var Artyom: any;
 
-window.addEventListener("click", function (): void {
+window.addEventListener("load", function (): void {
     var artyom: any = new Artyom();
 
     function startContinuousArtyom(): void {
@@ -114,7 +114,7 @@ window.addEventListener("load", function (): void {
     todosDOMElement = document.querySelector("#todos");
     counterDOMElement = document.querySelector("#counter");
     doneDOMElement = document.querySelector("#done");
-    openDOMElement = document.querySelector("open");
+    openDOMElement = document.querySelector("#open");
 
     /**
      * Jetzt da der DOM verfügbar ist kann auch ein Event-Listener
