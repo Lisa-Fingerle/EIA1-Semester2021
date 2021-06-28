@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.leicht {
+    width: 300px;
+    height: 300px;
+    
+    align-items: center;
+}
+
+.leicht div {
+    width: 33%;
+    height: 33%;
+}
+
+#spielFeld div {
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    float: left;
+    cursor: pointer;
+}
+
+.mittel {
+    width: 400px;
+    height: 400px;
+    
+}
+
+.mittel div {
+    width: 25%;
+    height: 25%;
+}
+
+
+#schwierigkeit {
+    display: inline-block;
+    margin: 10px auto;
+
+}
+
+#spielFeld {
+    clear: both;
+    margin: 10px auto;
+}

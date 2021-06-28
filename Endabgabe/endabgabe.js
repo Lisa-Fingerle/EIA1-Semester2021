@@ -47,51 +47,13 @@ window.addEventListener("load", function () {
     resetButton.addEventListener("click", drawSpielFeldtodomLeicht);
 });
 function drawSpielFeldtodomLeicht() {
-    //spielFeld.innerHTML = ""; 
+    spielFeld.innerHTML = "";
     alleSchwierigkeitsstufen.innerHTML = ""; //Buttons verschwinden bei Erscheinen des Spielfelds
     var _loop_1 = function (index) {
         var feld = document.createElement("div"); //9 Divs werden innerhalb des Divs "SpielFeld" erstellt
         feld.dataset.feldangeklicktindex = index.toString(); //index.toString(); //eigener Wert für jedes Feld, mithilfe von dataset erstellt. Wird als Index benutzt
         spielFeld.classList.add("leicht"); //das Spielfeld erhält die Klasse "leicht", mit den in CSS festgelegten Werten
         spielFeld.appendChild(feld); //dem Spielfeld werden die Divs übergeben
-        /* const clickOutcomeLeicht = (e: Event): void => {
-             const i: number = (e.target as HTMLDivElement).i;
-             console.log(e.target);
-             if (!feld[i]) {
-                 feld[i] = currentPlayer;
-                 e.target.innerText = currentPlayer;
- 
-                 currentPlayer = currentPlayer === playerOoutput ? playerXoutput : playerOoutput; //wechselt zwischen X und O
-             }
-             
-             if (currentPlayer == playerOoutput) {
-                 feld.innerHTML = "<span class='fas fa-times'></span>";
-                 console.log("player X played");
-             } else {
- 
-                 feld.innerHTML = "<span class='far fa-circle'></span>";
-                 console.log("player O played");
-             }
-         };
-         */
-        //Praktikum
-        /*function clickOutcomeLeicht(e: Event): void {
-            let feldangeklicktindex = (e.target as HTMLElement).dataset.feldangeklicktindex; //googlen
-            //let feldangeklicktindex: string  = (e.target as HTMLElement).dataset.feldNummer;
-            schwierigkeitsstufeLeicht[feldangeklicktindex].value = currentPlayer;
-            console.log(feldangeklicktindex);
-            if (feld.innerHTML == "" && currentPlayer == playerXoutput) {
-                feld.innerHTML = "<span class='fas fa-times'></span>";
-                console.log("player X has played");
-
-
-            } else {
-                comTurn = true;
-                computerSpieltLeicht();
-            }
-
-        }
-        */
         //Bei click auf ein feld im Gitter, wird die Funktio für das Click Event aufgerufen.
         feld.addEventListener("click", clickOutcomeLeicht);
         currentPlayer = playerOoutput; //Der Anfangsspieler wird auf Spieler O gesetzt
@@ -99,7 +61,7 @@ function drawSpielFeldtodomLeicht() {
             var feldangeklicktindex = e.target.dataset.feldangeklicktindex;
             schwierigkeitsstufeLeicht[feldangeklicktindex].value = currentPlayer; //Feld kann nicht 2mal gecklickt werden
             //if (!feld[feldangeklicktindex]) {
-            if (feld.innerHTML == "") {
+            if (feld.innerHTML == "" && !feld[feldangeklicktindex]) {
                 feld[feldangeklicktindex] = currentPlayer;
                 currentPlayer = currentPlayer === playerXoutput ? playerOoutput : playerXoutput; //Ternary -> Ist current Player = player O? Dann wird current Player zu Player X.
                 if (currentPlayer == playerXoutput) {
@@ -110,13 +72,6 @@ function drawSpielFeldtodomLeicht() {
                     setTimeout(computerSpieltLeicht, 300);
                 }
             }
-            checkWins();
-            /*if (feld[feldangeklicktindex].clicked == true) {
-                console.log("Spielfeld voll");
-                window.alert("Tie!");
-                   
-                    
-            }*/
         }
     };
     for (var index = 0; index < schwierigkeitsstufeLeicht.length; index++) {
@@ -124,23 +79,58 @@ function drawSpielFeldtodomLeicht() {
     }
     computerSpieltLeicht();
 }
-//nicht löschen
 function computerSpieltLeicht() {
-    var inhaltFelder = spielFeld.children;
-    if (currentPlayer == playerOoutput) {
-        var random = Math.floor(Math.random() * schwierigkeitsstufeLeicht.length);
-        inhaltFelder.item(random).innerHTML = "<span class='far fa-circle'></span>";
-        console.log("current Player ist: " + currentPlayer);
-        currentPlayer = playerOoutput;
+    /*if (currentPlayer == playerXoutput) {
+        return;
     }
-    checkWins();
+    
+    do {
+        var random: number = Math.floor(Math.random() * schwierigkeitsstufeLeicht.length);
+        if (inhaltFelder.item(random).innerHTML == "" && currentPlayer == playerOoutput) {
+            inhaltFelder.item(random).innerHTML = "<span class='far fa-circle'></span>";
+            console.log("current Player ist: " + currentPlayer);
+            currentPlayer = playerXoutput;
+        } else if (inhaltFelder.item(random).innerHTML !== "") {
+            inhaltFelder.item(random).innerHTML = "<span class='far fa-circle'></span";
+        }
+           
+        
+    } while (currentPlayer == playerOoutput);
+        
+    */
+    /*if (currentPlayer == playerXoutput) {
+        return;
+    }
+
+    let inhaltFelder: HTMLCollection = spielFeld.children;
+    var otherrandom: number = Math.floor(Math.random() * schwierigkeitsstufeLeicht.length);
+    var random: number = Math.floor(Math.random() * schwierigkeitsstufeLeicht.length);
+    if (currentPlayer == playerOoutput && inhaltFelder.item(random).innerHTML == "") {
+        inhaltFelder.item(random).innerHTML = "<span class='far fa-circle'></span";
+
+    } else if (inhaltFelder.item(random).innerHTML !== "") {
+        console.log("Feld ist besetzt");
+        
+    }
+    */
+    while (currentPlayer == playerOoutput) {
+        var random = Math.floor(Math.random() * schwierigkeitsstufeLeicht.length);
+        var otherrandom = Math.floor(Math.random() * schwierigkeitsstufeLeicht.length);
+        var inhaltFelder = schwierigkeitsstufeLeicht[random][otherrandom];
+        if (inhaltFelder.value == "") {
+            return;
+        }
+    }
 }
-function checkWins() {
-    console.log("checking wins!");
+//(inhaltFelder.item(random).innerHTML !== "")
+/*function tie(): void {
+    var clicked: Feld = spielFeld.innerHTML;
+    if (clicked.value != "") {
+        window.alert("It`s a tie");
+    }
+    
 }
-function tie() {
-    window.alert("It`s a tie");
-}
+*/
 function updatecounterYou() {
     scoreYouDOMElement.innerHTML = schwierigkeitsstufeLeicht.length + "Points";
 }
